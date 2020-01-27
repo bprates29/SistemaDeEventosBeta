@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Adicionando Eventos</title>
+</head>
+<body>
+<p>Adicionando Evento!</p>
+<form action="#" th:action="@{/addevento}" th:object="${evento}" method="post">
+    <label for="nome">Name</label>
+    <input type="text" th:field="*{nome}" id="nome" placeholder="Nome">
+    <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+    <label for="descricao">Descricao</label>
+    <input type="text" th:field="*{descricao}" id="descricao" placeholder="Descrição">
+    <span th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}"></span>
+    <input type="submit" value="Add Evento">   
+</form>
+</body>
+</html>

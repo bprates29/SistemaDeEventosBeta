@@ -1,0 +1,21 @@
+<html>
+<head><title>Home Page</title></head>
+<body>
+<h1>Sistema de Eventos !</h1>
+<p>Bem vindo ao <span th:text="${appName}"> Sistema de Eventos </span></p>
+
+<html lang="en">
+<head><title>Error Occurred</title></head>
+<body>
+<form action="/addevento" method="post">
+  Nome do evento:<br>
+  <input type="text" name="nome"><br>
+  Descrição:<br>
+  <input type="text" name="descricao">
+  <input type="submit" value="Evento">
+</form>
+</body>
+</html>
+
+</body>
+</html>
